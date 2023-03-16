@@ -1,0 +1,191 @@
+/*
+https://coolors.co/palette/0a0908-22333b-eae0d5-c6ac8f-5e503f
+or
+https://coolors.co/palette/132a13-31572c-4f772d-90a955-ecf39e
+
+92140c
+*/
+* { 
+ /* outline: 1px solid red;
+  outline-offset: -1px; */
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  font-size: 10px; 
+  font-family: 'Quicksand', sans-serif;
+  background-color: white;
+  height:100%;
+  position:relative;
+}
+
+h1 {
+    padding: 0px 10px 10px 10px;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 6em;
+}
+
+h2{
+    font-size: 20px;
+    line-height: 2;
+    letter-spacing: 0px;
+    color: black;
+}
+  
+p {
+    font-size: 13px;
+    line-height: 2;
+    letter-spacing: 0px;
+    color: black;
+}
+
+hr.mid {
+  width: 50%;
+  margin: 20px auto 20px auto;
+}
+.footer {
+  margin-top: auto;
+}
+
+.box {
+  background-color: #0C120C;
+  opacity: 0.3;
+}
+
+p.copyright {
+  font-size: 10px;
+  padding: 20px 20px 0px 20px;
+}
+
+
+img.profile {
+    display: block;
+    margin: auto;
+    border: 5px solid #555;
+    
+}
+
+li {
+  list-style-type: circle;
+}
+
+li.sp {
+    color: blue;
+    font-weight: bold;
+}
+
+a:link {
+    color: white;
+}
+  
+a:visited {
+    color: white;
+}
+
+
+/* PROFILE BOXES */
+#header {
+  width: 100%;
+  background-color: red;
+  height: 30px;
+}
+
+#container {
+  width: 75%;
+  background-color: transparent;
+  margin: 20px auto;
+}
+
+#profile-text {
+  width: 50%;
+  float: left;
+  height: 300px;
+  background-color: transparent;
+  font-weight: 300;
+}
+
+#profile-pic {
+  width: 50%;
+  float: left;
+  height: 300px;
+  background-color: transparent;
+}
+
+#clear {
+  clear: both;
+}
+/* Style the header with a grey background and some padding */
+.header {
+  background-color: transparent;
+  padding: 20px 10px;
+}
+/* Style the header links */
+.header a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 25px;
+  /*ROUNDED EDGES border-radius: 4px;*/
+
+}
+/* Style the logo link */
+a.logo {
+  font-size: 40px;
+  font-weight: 300;
+  overflow: hidden;
+  text-decoration: none;
+}
+/* Float the link section to the right */
+.nav-right {
+  float: right;
+}
+/* Change the background color on mouse-over */
+.nav-right a:hover {
+  background-color: #d1d1d1;
+  color: black;
+}
+/* Style the active/current link*/
+.header a.active {
+  background-color: #132a13;
+  color: white;
+}
+/* When screen is 500px wide or less, stacks the links on top of each other */
+@media screen and (max-width: 500px) {
+  .header a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .nav-right {
+    float: none;
+  }
+
+  .column {
+    width: 100%;
+  }
+}
+
+/* IMAGE CONTAINERS */
+.row {
+  text-align: center;
+}
+/* Three image containers (use 25% for four, and 50% for two, etc) */
+.column {
+  float:left;
+  width: 25%;
+  padding: 0px;
+  margin: 40px 0 40px 0;
+}
+
+/* Clear floats after image containers */
+.row::after {
+  content: "";
+  clear: both;
+  display: inline-block;
+  
+}
