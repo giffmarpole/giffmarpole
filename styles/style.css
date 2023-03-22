@@ -69,7 +69,7 @@ p.copyright {
 }
 #container-1 {
   width: 75%;
-  background-color: rgba(213, 193, 7, 0.3);
+  background-color: transparent;
   margin: 20px auto;
   padding: 10px 30px
 }
@@ -77,19 +77,18 @@ p.copyright {
   width: 50%;
   float: left;
   height: 300px;
-  background-color: rgba(255, 0, 0, 0.3);
+  background-color: transparent;
   font-weight: 300;
 }
 #profile-pic {
   width: 50%;
   float: left;
   height: 300px;
-  background-color: rgba(40, 64, 200, 0.3);
+  background-color: transparent;
 }
 img.profile {
   display: block;
   margin: auto;
-  /* border: 5px solid var(--5); */
   height: 100%; /* Typically 250px */
   width: auto;
   border-radius: 40px;
