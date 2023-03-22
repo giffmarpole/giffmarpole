@@ -12,6 +12,8 @@
     <link rel="icon" href="logo.png" type="image/x-icon" />
 
     <meta charset="utf-8" /> <!-- Character set -->
+
+    <script src="https://kit.fontawesome.com/5aea969088.js" crossorigin="anonymous"></script>
     <meta name="viewport" content="width=device-width" /> 
     <meta name="author" content="Gifford Marpole" />
     <meta
@@ -33,15 +35,15 @@
   
     <div class="wrapper">
       <nav>
-        <a href="#" class="logo">GM</a>
+        <a href="index.html" class="logo">GM <i class="fa-brands fa-canadian-maple-leaf"></i></a>
         <input type="checkbox" name="" id="toggle">
-        <label for="toggle"><i class="material-icons">Menu🠻</i></label>
+        <label for="toggle"><i class="fa-solid fa-bars"></i></label>
         <div class="menu">
           <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">Services</a></li>
+            <li><a href="#"><i class="fa-solid fa-house"></i> Home</a></li>
+            <li><a href="#"><i class="fa-solid fa-user-large"></i> About</a></li>
+            <li><a href="#"><i class="fa-solid fa-book"></i> Resume</a></li>
+            <li><a href="#"><i class="fa-solid fa-address-book"></i> Contact</a></li>
           </ul>
         </div>
       </nav>
@@ -51,53 +53,55 @@
     <main>
       
 <!-- About section -->
-      <div id="container">
-
+      <div id="container-1">
         <div id="profile-text">
           <center>
           <p style="font-size: 16px"> Hi, my name is<br></p>
-          <div class="name">Gifford Marpole </div> <div class="name-button" title="Name pronunciation" onclick="playName()">▶</div>
+          <div class="name">Gifford Marpole </div> 
+          
+          <div class="name-button" title="Play name pronunciation" onclick="playName()"><i class="fa-solid fa-volume-high"></i></div>
+          <!--<p style="font-size: 16px">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>-->
           </center>
         </div>
 
         <div id="profile-pic">
-          <center><img src="https://craftypixels.com/placeholder-image/250/ffffff/000000" class = "profile"></center>
+          <img src="images/Picture2.png" class ="profile">
         </div>
+
         <div id="clear"></div>
 
       </div>
 
-      <hr class = "mid"> <!-- Mid page line -->
+      <!-- Mid page line -->
+      <hr id = "mid"> 
+
+      <!-- Bottom page navigation -->
+      <div id="container-2">
+        <!-- About -->
+        <!--<div id="gallery-column">
+          <a href="pictures.html"><i id="icon-row" class="fa-solid fa-user-large fa-10x"></i></a>
+          <center><p>About</p></center>
+        </div>-->
+      </div>
+    
     </main>
 
-      <!--<div class="row">
-        <div class="column">
-          <img src="https://www.w3schools.com/howto/img_snow.jpg" alt="Snow" style="width:90%">
-        </div>
-        <div class="column">
-          <a href="pictures.html"><img src="https://www.w3schools.com/howto/img_forest.jpg" alt="Forest" style="width:90%"></a>
-        </div>
-        <div class="column">
-          <img src="https://www.w3schools.com/howto/img_mountains.jpg" alt="Mountains" style="width:90%">
-        </div>
-        <div class="column">
-          <a href="pictures.html"><img src="https://www.w3schools.com/howto/img_forest.jpg" alt="Forest" style="width:90%"></a>
-        </div>
-      </div>-->
-
-<!---->   
+  <!---->   
     
 
-<!-- FOOTER -->
-    <footer>
-      <div class="wrapper">
-      <p class = "copyright">© Copyright 2023 by Giff. All rights reversed.</p>
-      </div>
-    </footer>
+  <!-- FOOTER -->
+  <footer>
+    <div class="wrapper">
+    <p class = "copyright">Copyright &copy; <script>document.write(new Date().getFullYear())</script> by Gifford Marpole. All Rights Reserved.</p>
+    </div>
+  </footer>
 
-<!-- LINK TO scripts.js -->
-
-<script src="scripts/main.js"></script> <!-- Links to scripts.js -->
+  <!-- LINK TO scripts.js -->
+  <script src="scripts/main.js"></script> <!-- Links to scripts.js -->
 
   </body>
   
