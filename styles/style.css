@@ -17,6 +17,7 @@ html, body {
   font-size: 15px; 
   font-family: 'Quicksand', sans-serif;
   background-color: #111D13;
+  background-image: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(31,31,31,1) 75%, rgba(17,29,19,1) 100%);
   height:100%;
   position:relative;
 }
@@ -39,8 +40,8 @@ p {
     color: var(--5);
 }
 
-hr.mid {
-  width: 50%;
+hr#mid {
+  width: 75%;
   margin: 20px auto 20px auto;
 }
 .footer {
@@ -58,59 +59,46 @@ p.copyright {
 }
 
 
-img.profile {
-    display: block;
-    margin: auto;
-    border: 5px solid #555;
-    
-}
+ 
 
-/* PROFILE BOXES */
+/* PROFILE (About) CONTAINERS */
 #header {
   width: 100%;
-  background-color: red;
+  background-color: transparent;
   height: 30px;
 }
-#container {
+#container-1 {
   width: 75%;
-  background-color: transparent;
+  background-color: rgba(213, 193, 7, 0.3);
   margin: 20px auto;
+  padding: 10px 30px
 }
 #profile-text {
   width: 50%;
   float: left;
   height: 300px;
-  background-color: transparent;
+  background-color: rgba(255, 0, 0, 0.3);
   font-weight: 300;
 }
 #profile-pic {
   width: 50%;
   float: left;
   height: 300px;
-  background-color: transparent;
+  background-color: rgba(40, 64, 200, 0.3);
+}
+img.profile {
+  display: block;
+  margin: auto;
+  /* border: 5px solid var(--5); */
+  height: 100%; /* Typically 250px */
+  width: auto;
+  border-radius: 40px;
 }
 #clear {
   clear: both;
 }
 
-/* IMAGE CONTAINERS */
-.row {
-  text-align: center;
-}
-/* Three image containers (use 25% for four, and 50% for two, etc) */
-.column {
-  float:left;
-  width: 25%;
-  padding: 0px;
-  margin: 40px 0 40px 0;
-}
-/* Clear floats after image containers */
-.row::after {
-  content: "";
-  clear: both;
-  display: inline-block;
-  
-}
+/* NAME & NAME-BUTTON */
 .name{
   border: transparent;
   background-color: transparent;
@@ -119,11 +107,28 @@ img.profile {
   font-size: 50px;
   color: var(--5);
 }
-.name-button{
+.name-button{ /* If webkit is not supported */
   font-size: 30px;
   color: var(--2);
-  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
-
+  text-shadow:
+   -1px -1px 0 white,  
+    1px -1px 0 white,
+    -1px 1px 0 white,
+     1px 1px 0 white;
+}
+@supports (-webkit-text-stroke: 1px black) {
+  .name-button {
+    text-shadow: none;
+    -webkit-text-fill-color: var(--2);
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: white;
+  }
+  .name-button:hover {
+    color: white;
+    -webkit-text-fill-color: white;
+    -webkit-text-stroke-width: 0px;
+    -webkit-text-stroke-color: none;
+  }
 }
 .name,
 .name-button{
@@ -141,7 +146,6 @@ img.profile {
 
 
 /* NAVIGATION BAR */
-
 .wrapper {
   width: 100%;
   max-width: 80%;
@@ -160,6 +164,7 @@ nav {
 }
 nav .logo{
   font-weight: 300;
+  font-size: 30px;
 }
 nav ul{
   list-style: none;
@@ -172,17 +177,46 @@ nav a {
 }
 nav a:hover {
   text-decoration: none;
-  color: red;
-
+  color: var(--3);
 }
 nav #toggle,
 nav label{
   display: none;
 }
-@media screen and (max-width: 500px) { /*If screen is less than 500px */
-  .column {
-    width: 100%;
-  }
+.nav-btn{
+  background-color: transparent;
+  color: white;
+
+}
+
+/* CONTAINER 2 */
+#container-2 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  background-color: transparent;
+}
+#gallery-column a img{
+  flex: 33.33%;
+  float:left;
+  margin: 50px;
+  width: 200px;
+  height: 200px;
+}
+#icon-row{
+  margin: 20px;
+  color:#0C120C
+}
+#icon-row:hover{
+  color: var(--3);
+}
+
+/*If screen is less than 800px */
+@media screen and (max-width: 800px) {
+
   nav .menu {
     width: 100%;
     height: 0;
@@ -201,4 +235,24 @@ nav label{
   nav #toggle:checked ~ .menu {
     height: 100%;
   }
+
+  /* PROFILE SECTION */
+  #container-1{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #profile-text, #profile-picture
+    {
+        display: block; 
+        float:left; 
+        width: 100%;
+        flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    }
 }
+
+
+
